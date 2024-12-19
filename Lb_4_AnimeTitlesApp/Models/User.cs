@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Lb_4_AnimeTitlesApp;
+namespace Lb_4_AnimeTitlesApp.Models;
 
 public partial class User
 {
@@ -12,6 +12,8 @@ public partial class User
     public string LastName { get; set; } = null!;
 
     public DateOnly DateOregistration { get; set; }
+
+    //навигационное свойство
 
     public virtual ICollection<AnimeTitle> AnimeTitles { get; set; } = new List<AnimeTitle>();
 }
